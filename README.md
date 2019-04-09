@@ -4,7 +4,7 @@ A slightly improved version of the `Ping` class from .NET Core.
 ## Purpose
 The standard [.NET Ping class](https://docs.microsoft.com/en-us/dotnet/api/system.net.networkinformation.ping?view=netframework-4.7.2) has a flaw.  It only delivers a valid `PingReply.RoundtripTime` value for replies with status == `IPStatus.Success`.  This is primarily a problem when using the `Ping` class to perform a traceroute, as most of the replies will have status `IPStatus.TtlExpired`.  In this case, the `Ping` class has a perfectly valid round-trip-time already measured, but intentionally throws it out and constructs the `PingReply` with a `RoundtripTime` of `0`.
 
-[Microsoft doesn't care to change this.](https://visualstudio.uservoice.com/forums/121579-visual-studio-ide/suggestions/6365924-pingreply-include-the-roundtriptime-no-matter-the)
+[Microsoft does not care to change this.](https://visualstudio.uservoice.com/forums/121579-visual-studio-ide/suggestions/6365924-pingreply-include-the-roundtriptime-no-matter-the)
 
 Many developers work around this issue by measuring the response time themselves using the [Stopwatch](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch?view=netframework-4.7.2) class.  Unfortunately, this delivers a significantly less-accurate measure of response time, as you are also measuring the time required for your `Thread` to resume after receiving the ping reply.
 
