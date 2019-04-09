@@ -5,7 +5,7 @@
 using System;
 using System.ComponentModel;
 
-namespace SmartPing.SystemNet.NetworkInformation
+namespace SmartPing
 {
     public delegate void PingCompletedEventHandler(object sender, PingCompletedEventArgs e);
 

@@ -4,7 +4,7 @@
 
 using System;
 
-namespace SmartPing.SystemNet.NetworkInformation
+namespace SmartPing
 {
     public class PingOptions
     {

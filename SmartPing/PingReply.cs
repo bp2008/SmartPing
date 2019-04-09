@@ -4,7 +4,7 @@
 
 using System.Net;
 
-namespace SmartPing.SystemNet.NetworkInformation
+namespace SmartPing
 {
     public class PingReply
     {
