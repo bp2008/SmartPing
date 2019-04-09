@@ -8,7 +8,7 @@ The standard [.NET Ping class](https://docs.microsoft.com/en-us/dotnet/api/syste
 
 Many developers work around this issue by measuring the response time themselves using the [Stopwatch](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch?view=netframework-4.7.2) class.  Unfortunately, this delivers a significantly less-accurate measure of response time, as you are also measuring the time required for your `Thread` to resume after receiving the ping reply.
 
-This project is a nearly-identical copy of the `Ping` class from [.NET Core version 2.0.5](https://github.com/dotnet/corefx/releases/tag/v2.0.5). This version was chosen because it pre-dates several changes to the framework which made extracting the `Ping` class much more difficult.
+This project is a nearly-identical copy of the `Ping` class, and supporting classes, from [.NET Core version 2.0.5](https://github.com/dotnet/corefx/releases/tag/v2.0.5). This version was chosen because it pre-dates several changes to the framework which made extracting the `Ping` class much more difficult.
 
 These are the notable modifications:
 1) Namespaces have been changed for reasons of compatibility.  The improved `Ping` class is located in the `SmartPing` namespace.
