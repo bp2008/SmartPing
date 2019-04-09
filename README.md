@@ -1,5 +1,5 @@
 # SmartPing
-A slightly improved version of the Ping class from .NET Core.
+A slightly improved version of the `Ping` class from .NET Core.
 
 ## Purpose
 The standard [.NET Ping class](https://docs.microsoft.com/en-us/dotnet/api/system.net.networkinformation.ping?view=netframework-4.7.2) has a flaw.  It only delivers a valid `PingReply.RoundtripTime` value for replies with status == `IPStatus.Success`.  This is primarily a problem when using the `Ping` class to perform a traceroute, as most of the replies will have status `IPStatus.TtlExpired`.  In this case, the `Ping` class has a perfectly valid round-trip-time already measured, but intentionally throws it out and constructs the `PingReply` with a `RoundtripTime` of `0`.
