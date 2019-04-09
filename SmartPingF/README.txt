@@ -1,0 +1,2 @@
+﻿The "SmartPing" project is a class library designed to target .NET Standard.
+The "SmartPingF" project is a class library designed to target the full .NET Framework. (SmartPingF contains only this README and a bunch of links to all the cs files in the SmartPing project)
