@@ -16,6 +16,6 @@ These are the notable modifications:
 3) It only works on Windows OS.  While cross-platform implementations of `Ping` are available in .NET Core, they were removed from this project due to not understanding the build system that is required to handle them.
 
 ## Usage
-Download a release from the releases tab, or build SmartPing yourself.  Two DLLs are provided in releases.
+[Download a release from the releases tab](https://github.com/bp2008/SmartPing/releases), or build SmartPing yourself.  Include the appropriate DLL as a reference in your .NET project.  Use classes in the `SmartPing` namespace instead of `System.Net.NetworkInformation`.  Two DLLs are provided in releases.
 * SmartPing.dll - Targets .NET Standard 2.0
 * SmartPingF.dll - Targets .NET Framework 4.6.2
